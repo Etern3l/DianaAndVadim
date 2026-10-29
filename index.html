@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="description" content="Diana and Vadim - бурмалда">
+  <title>Diana and Vadim</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon-heart.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="password-screen" id="password-screen">
+    <div class="pin-card">
+      <form id="password-form" class="pin-form" aria-label="Ввод PIN-кода">
+        <div class="pin-slots" id="pin-slots">
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="one-time-code" aria-label="Первая цифра PIN-кода" autofocus>
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Вторая цифра PIN-кода">
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Третья цифра PIN-кода">
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Четвёртая цифра PIN-кода">
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Пятая цифра PIN-кода">
+          <input class="pin-digit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Шестая цифра PIN-кода">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <main id="site-content" class="site-content" hidden>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Diana and Vadim — наверх">
+        <svg class="wordmark-mark" viewBox="0 0 42 42" aria-hidden="true">
+          <circle cx="21" cy="21" r="19" />
+          <path d="M21 29.5s-9.2-5.8-9.2-12a5.1 5.1 0 0 1 9.2-3.1 5.1 5.1 0 0 1 9.2 3.1c0 6.2-9.2 12-9.2 12Z" />
+        </svg>
+        <span class="wordmark-text">Diana <i>and</i> Vadim</span>
+      </a>
+    </header>
+
+    <section class="hero section-shell" id="home" tabindex="-1">
+      <div class="hero-copy reveal">
+        <h1>Для<br><em>Дианы</em></h1>
+        <p class="hero-subtitle"></p>
+        <a class="button button-dark" href="#memories">Кто же она такая?😱<span aria-hidden="true">↘</span></a>
+        <div class="hero-footnote">
+          <span class="handwritten">История в коротких моментах</span>
+          <span class="fine-line"></span>
+          <span class="start-date" id="start-date"></span>
+        </div>
+        <div class="date-placement" data-dates="hero" aria-label="Найденная дата"></div>
+      </div>
+      <figure class="hero-photo polaroid reveal">
+        <img src="images/kiss.jpg">
+        <span class="tape tape-top" aria-hidden="true"></span>
+      </figure>
+      <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
+      <span class="hero-sparkle sparkle-two" aria-hidden="true">✧</span>
+    </section>
+
+    <section class="intro-strip">
+      <span class="intro-rule"></span>
+      <p>Сейчас будет 6 чудес света</p>
+      <span class="intro-rule"></span>
+    </section>
+
+    <section class="section-shell memory-section" id="memories">
+      <div class="section-heading reveal">
+        <div><h2>Самая красивая девушка на планете<br><em>и это не только про внешность</em></h2></div>
+      </div>
+      <div class="date-placement date-placement-cards" data-dates="cards" aria-label="Найденная дата"></div>
+      <div class="memory-grid" id="memory-grid" aria-label="Интерактивные карточки воспоминаний"></div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-shell">
+        <div class="section-heading gallery-heading reveal">
+          <div><h2>Наши моменты, запечатлённые на камеру<em>Их не очень много, да и это не все, просто кто-то считает себя нефотогеничным. Это исправимо.</em></h2></div>
+        </div>
+        <div class="date-placement date-placement-gallery" data-dates="gallery" aria-label="Найденная дата"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+        <p class="gallery-note handwritten">я очень тебя люблю</p>
+      </div>
+    </section>
+
+    <section class="song-section">
+      <div class="section-shell song-layout reveal">
+        <div class="song-cover-wrap">
+          <div class="song-cover"><img src="./images/spotify2.jpg" data-fallback="images/photo-placeholder.svg" alt="Свет и музыка на вечернем концерте" loading="lazy"></div>
+          <span class="cover-scribble handwritten">крутые песенки</span>
+        </div>
+        <div class="song-copy">
+          <h2>Наш <em>плейлист</em></h2>
+          <p class="song-subtitle">Диана молодец, хорошая идея была</p>
+          <time class="secret-date secret-date-static date-placement-song" datetime="2026-06-27">15 · 06 · 2026</time>
+          <div id="spotify-area"></div>
+        </div>
+        <span class="song-decoration" aria-hidden="true">♫</span>
+      </div>
+    </section>
+
+    <section class="letter-section section-shell" id="letter">
+      <div class="date-placement date-placement-letter" data-dates="letter" aria-label="Найденная дата"></div>
+      <div class="letter-heading reveal"><p class="eyebrow">вам пришло новое сообщение</p><h2>Все что я хочу сказать <em>в связи с последними событиями</em></h2></div>
+      <div class="envelope-wrap reveal" id="envelope-wrap">
+        <div class="envelope">
+          <div class="envelope-flap" aria-hidden="true"></div>
+          <span class="envelope-seal" aria-hidden="true">✳</span>
+          <p>.</p>
+          <button class="button button-dark" id="open-letter" type="button">Прочитать <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <article class="letter-paper" id="letter-paper" aria-labelledby="letter-title" hidden>
+        <button class="icon-button letter-close" id="close-letter" type="button" aria-label="Закрыть письмо">×</button>     
+        <div class="letter-body" id="letter-body"></div>
+      </article>
+    </section>
+
+    <footer class="final-section" id="goodbye">
+      <div class="final-inner reveal">
+        <div class="footer-carousel" id="footer-carousel" aria-label="Фотографии, которые можно листать">
+          <button class="footer-carousel-arrow" type="button" data-footer-prev aria-label="Предыдущее фото">←</button>
+          <figure class="footer-carousel-frame">
+            <img id="footer-carousel-image" alt="">
+          </figure>
+          <button class="footer-carousel-arrow" type="button" data-footer-next aria-label="Следующее фото">→</button>
+          <span class="footer-carousel-count" id="footer-carousel-count" aria-live="polite"></span>
+        </div>
+        <p class="footer-love-note handwritten">Всё это сделано им с любовью</p>
+        <p class="footer-love-note handwritten">И сделано то, что хотелось сделать еще раньше</p>
+        <div class="date-placement date-placement-goodbye" data-dates="goodbye" aria-label="Найденная дата"></div>
+        <a class="back-to-top" href="#home">давай по новой миша ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <dialog class="modal photo-modal" id="photo-modal" aria-label="Просмотр фотографии">
+    <button class="icon-button modal-close" type="button" data-close-photo aria-label="Закрыть просмотр">×</button>
+    <button class="modal-arrow modal-prev" type="button" aria-label="Предыдущая фотография">←</button>
+    <figure class="modal-figure"><img id="modal-image" alt=""><figcaption><span id="modal-caption"></span><time id="modal-date"></time></figcaption></figure>
+    <button class="modal-arrow modal-next" type="button" aria-label="Следующая фотография">→</button>
+  </dialog>
+
+  <dialog class="modal memory-modal" id="memory-modal" aria-label="Воспоминание">
+    <button class="icon-button modal-close" type="button" data-close-memory aria-label="Закрыть воспоминание">×</button>
+    <div class="memory-modal-content" id="memory-modal-content"></div>
+  </dialog>
+
+  <dialog class="modal video-modal" id="video-modal" aria-label="Просмотр видео">
+    <button class="icon-button modal-close" type="button" data-close-video aria-label="Закрыть видео">×</button>
+    <div id="video-modal-content"></div>
+  </dialog>
+</body>
+</html>

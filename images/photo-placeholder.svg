@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Photo placeholder</title>
+  <desc id="desc">A warm paper-colored placeholder for a photograph</desc>
+  <rect width="900" height="700" fill="#e8d8d1"/>
+  <circle cx="690" cy="170" r="72" fill="#d9a7a0" opacity=".8"/>
+  <path d="M0 520 230 310l145 130 170-205 355 465H0Z" fill="#c6a99b"/>
+  <path d="M0 585 310 380l230 190 190-145 170 150v125H0Z" fill="#ad8e83"/>
+  <text x="450" y="655" text-anchor="middle" fill="#744650" font-family="Georgia,serif" font-size="26">your photo goes here</text>
+</svg>
