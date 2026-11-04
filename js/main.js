@@ -84,6 +84,14 @@
   });
   $("#start-date").textContent = data.startDate;
 
+  const breakupToggle = $("#breakup-toggle");
+  const breakupMessage = $("#breakup-message");
+  breakupToggle.addEventListener("click", () => {
+    const isExpanded = breakupToggle.getAttribute("aria-expanded") === "true";
+    breakupToggle.setAttribute("aria-expanded", String(!isExpanded));
+    breakupMessage.hidden = isExpanded;
+  });
+
   const footerPhotos = data.footerPhotos;
   const footerCarouselImage = $("#footer-carousel-image");
   const footerCarouselCount = $("#footer-carousel-count");
